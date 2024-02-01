@@ -1,15 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const element = React.createElement("div", {
-  a: 5,
-  b: 10,
-  children: "Привіт, світ!",
-});
+// const elem1 = React.createElement("span", { children: "Привіт," });
+const elem1 = <span>Привіт, </span>;
+// const elem2 = React.createElement("span", { children: " " });
+const elem2 = <span>світ!</span>;
+// const elem3 = React.createElement("span", { children: "світ!" });
 
-console.log(element);
+// const element = React.createElement("div", {
+//   a: 5,
+//   b: 10,
+//   children: ["Привіт, світ!"],
+// });
 
-ReactDOM.render(element, document.querySelector("#root"));
+const jsxElement = (
+  <div>
+    {elem1}
+    {elem2}
+  </div>
+);
+
+console.log(jsxElement);
+
+// ReactDOM.render(element, document.querySelector("#root"));
 
 // ================================
 
