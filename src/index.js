@@ -1,28 +1,43 @@
-import React from "react";
 import ReactDOM from "react-dom";
+import paintings from "./paintings.json";
 
-// const elem1 = React.createElement("span", { children: "Привіт," });
-const elem1 = <span>Привіт, </span>;
-// const elem2 = React.createElement("span", { children: " " });
-const elem2 = <span>світ!</span>;
-// const elem3 = React.createElement("span", { children: "світ!" });
+const data = paintings[0];
+const data2 = paintings[1];
 
-// const element = React.createElement("div", {
-//   a: 5,
-//   b: 10,
-//   children: ["Привіт, світ!"],
-// });
-
-const jsxElement = (
+const painting1 = (
   <div>
-    {elem1}
-    {elem2}
+    <img src={data.url} alt={data.title} width="480" />
+    <h2>{data.title}</h2>
+    <p>
+      Автор: <a href={data.author.url}>{data.author.tag}</a>
+    </p>
+    <p>Ціна: {data.price} кредитів</p>
+    <p>Доступність: закінчується або є в наявності</p>
+    <button type="button">Додати до корзини</button>
   </div>
 );
 
-console.log(jsxElement);
+const painting2 = (
+  <div>
+    <img src={data2.url} alt={data.title} width="480" />
+    <h2>{data2.title}</h2>
+    <p>
+      Автор: <a href={data2.author.url}>{data2.author.tag}</a>
+    </p>
+    <p>Ціна: {data2.price} кредитів</p>
+    <p>Доступність: закінчується або є в наявності</p>
+    <button type="button">Додати до корзини</button>
+  </div>
+);
 
-// ReactDOM.render(element, document.querySelector("#root"));
+const els = (
+  <div>
+    {painting1}
+    {painting2}
+  </div>
+);
+
+ReactDOM.render(els, document.querySelector("#root"));
 
 // ================================
 
