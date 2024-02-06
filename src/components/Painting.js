@@ -24,12 +24,12 @@ const Painting = ({
 };
 
 Painting.propTypes = {
-  imageUrl: PropTypes.string,
-  title: PropTypes.string,
-  profileUrl: PropTypes.string,
-  author: PropTypes.string,
-  price: PropTypes.number,
-  quantity: PropTypes.number,
+  imageUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  profileUrl: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
 };
 
 export default Painting;
