@@ -8,7 +8,7 @@ export default function App() {
       <Section title="Топ тиждня">
         <PaintingList items={paintings} />
       </Section>
-      <Section />
+      <Section title="Найліпше" />
     </div>
   );
 }
